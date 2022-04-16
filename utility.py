@@ -1,8 +1,6 @@
 import numpy as np
 
-
-def generate_vrp_instance(n, seed=None):
-
+def generate_vrp_instance(n, center, requests, coordinates):
     """Generate a random VRP instance.
     Args:
         n: No. of nodes exclusing depot.
@@ -12,25 +10,29 @@ def generate_vrp_instance(n, seed=None):
         cost matrix.
     """
 
-    # Set seed
-    if seed is not None:
-        np.random.seed(seed)
+
 
     # Generate VRP instance
-    xc = (np.random.rand(n + 1) - 0.5) * 10
-    yc = (np.random.rand(n + 1) - 0.5) * 10
+    xs = np.zeros(6)
+    ys = np.zeros(6)
+    ys[0] = coordinates[center]['latitude']
+    xs[0] = coordinates[center]['longitude']
+
+    for i in range(1, 6):
+        ys[i] = (coordinates[requests[i - 1]]['latitude'] - ys[0]) * 500
+        xs[i] = (coordinates[requests[i - 1]]['longitude'] - xs[1]) * 500
+
     instance = np.zeros((n + 1, n + 1))
     for ii in range(n + 1):
         for jj in range(ii + 1, n + 1):
-            instance[ii, jj] = (xc[ii] - xc[jj]) ** 2 + (yc[ii] - yc[jj]) ** 2
+            instance[ii, jj] = (xs[ii] - xs[jj]) ** 2 + (ys[ii] - ys[jj]) ** 2
             instance[jj, ii] = instance[ii, jj]
 
     # Return output
-    return instance, xc, yc
+    return instance, xs, ys
 
 
 def generate_cvrp_instance(n, m, seed=None):
-
     """Generate a random CVRP instance.
     Args:
         n: No. of nodes exclusing depot.
