@@ -15,12 +15,12 @@ def generate_vrp_instance(n, center, requests, coordinates):
     # Generate VRP instance
     xs = np.zeros(6)
     ys = np.zeros(6)
-    ys[0] = coordinates[center]['latitude']
-    xs[0] = coordinates[center]['longitude']
+    ys[0] = 0
+    xs[0] = 0
 
     for i in range(1, 6):
-        ys[i] = (coordinates[requests[i - 1]]['latitude'] - ys[0]) * 500
-        xs[i] = (coordinates[requests[i - 1]]['longitude'] - xs[1]) * 500
+        ys[i] = (coordinates[requests[i - 1]]['latitude'] - coordinates[center]['latitude']) * 500
+        xs[i] = (coordinates[requests[i - 1]]['longitude'] - coordinates[center]['longitude']) * 500
 
     instance = np.zeros((n + 1, n + 1))
     for ii in range(n + 1):

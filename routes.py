@@ -14,6 +14,20 @@ class Node:
         return self.position == other.position
 
 
+def return_path(current_node):
+    """
+        Recreates the path from the current node to the starting node.
+    """
+
+    path = []
+    current = current_node
+    while current is not None:
+        path.append(current.position)
+        current = current.parent
+    path = path[::-1]
+    return path
+
+
 class Route:
 
     def __init__(self, dist_matrix, coordinates):
@@ -22,19 +36,7 @@ class Route:
         self.total_nodes = dist_matrix.shape[0]
         self.start = None
         self.end = None
-
-    def return_path(self, current_node):
-        """
-            Recreates the path from the current node to the starting node.
-        """
-
-        path = []
-        current = current_node
-        while current is not None:
-            path.append(current.position)
-            current = current.parent
-        path = path[::-1]
-        return path
+        self.distance = None
 
     def neighbour(self, node):
         """
@@ -78,7 +80,7 @@ class Route:
 
             # Return the path if end point is reached
             if current_node == end_node:
-                path = self.return_path(current_node)
+                path = return_path(current_node)
                 return path
 
             neighbours = self.neighbour(current_node.position)
@@ -124,4 +126,15 @@ class Route:
     def generate(self, start, end):
         self.start = start
         self.end = end
-        return self.astar()
+        route = self.astar()
+        self.distance = self.route_distance(route)
+        return route
+
+    def route_distance(self, route):
+        """
+            Takes a route as a parameter and returns the distance of travelled on that route.
+        """
+        distance = 0
+        for i in range(1, len(route)):
+            distance += self.dist_matrix[route[i - 1]][route[i]]
+        return distance
