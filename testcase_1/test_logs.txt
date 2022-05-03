@@ -1,0 +1,508 @@
+Requests = [29 20 13 99 21]
+
+Clusters = [[2, 3, 5], [4, 1]]
+
+	###Simulation Starting###
+
+
+Iteration  1
+Request generated:  (90, 10)
+1	85	90	493
+2	84	90	843
+3	71	90	1270
+Source Point: 1
+Destination Point: 7
+1	87	90	807
+2	97	90	1069
+3	100	90	1503
+Source Point: 1
+Destination Point: -1
+
+Suitable Shuttles: 
+Distance: 493	 Number: WB78C2237	Number of Passengers: 3		Current Position: 85	 Route : [86, 85, 84, 71, 55, 41, 20, 21, 20, 19, 18, 13] 	Drop order: [(86, 20), (86, 21), (86, 13)]
+Selected Shuttle:  WB78C2237
+
+
+Number: WB78C2237	Number of Passengers: 3		Current Position: 85	 Route : [86, 85, 90, 85, 84, 71, 55, 41, 20, 21, 10, 11, 12, 13] 	Drop order: [(86, 20), (86, 21), (90, 10), (86, 13)]	 Service: True	 Pickup: (90, 10)
+Number: WB24S1026	Number of Passengers: 2		Current Position: 87	 Route : [86, 87, 97, 100, 98, 99, 98, 65, 64, 31, 30, 29] 	Drop order: [(86, 99), (86, 29)]	 Service: False	 Pickup: None
+
+Iteration  2
+[<__main__.Passenger object at 0x000001F935220310>, <__main__.Passenger object at 0x000001F9352209D0>, <__main__.Passenger object at 0x000001F935220EB0>]
+Passenger picked up at 90 by car WB78C2237
+Request generated:  (66, 28)
+2	97	66	420
+3	100	66	782
+4	98	66	558
+Source Point: 2
+Destination Point: 11
+
+Suitable Shuttles: 
+Distance: 420	 Number: WB24S1026	Number of Passengers: 2		Current Position: 97	 Route : [86, 87, 97, 100, 98, 99, 98, 65, 64, 31, 30, 29] 	Drop order: [(86, 99), (86, 29)]
+Selected Shuttle:  WB24S1026
+
+
+Number: WB78C2237	Number of Passengers: 4		Current Position: 90	 Route : [86, 85, 90, 85, 84, 71, 55, 41, 20, 21, 10, 11, 12, 13] 	Drop order: [(86, 20), (86, 21), (90, 10), (86, 13)]	 Service: False	 Pickup: None
+Number: WB24S1026	Number of Passengers: 2		Current Position: 97	 Route : [86, 87, 97, 66, 65, 98, 99, 98, 65, 64, 31, 30, 29, 28] 	Drop order: [(86, 99), (86, 29), (66, 28)]	 Service: True	 Pickup: (66, 28)
+
+Iteration  3
+[<__main__.Passenger object at 0x000001F935F08520>, <__main__.Passenger object at 0x000001F93522F0A0>]
+Passenger picked up at 66 by car WB24S1026
+Request generated:  (83, 43)
+3	66	83	2165
+4	65	83	2509
+5	98	83	2433
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB78C2237	Number of Passengers: 4		Current Position: 85	 Route : [86, 85, 90, 85, 84, 71, 55, 41, 20, 21, 10, 11, 12, 13] 	Drop order: [(86, 20), (86, 21), (90, 10), (86, 13)]	 Service: False	 Pickup: None
+Number: WB24S1026	Number of Passengers: 3		Current Position: 66	 Route : [86, 87, 97, 66, 65, 98, 99, 98, 65, 64, 31, 30, 29, 28] 	Drop order: [(86, 99), (86, 29), (66, 28)]	 Service: False	 Pickup: None
+
+Iteration  4
+Request generated:  (110, 84)
+4	65	110	1112
+5	98	110	898
+6	99	110	713
+Source Point: 6
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB78C2237	Number of Passengers: 4		Current Position: 84	 Route : [86, 85, 90, 85, 84, 71, 55, 41, 20, 21, 10, 11, 12, 13] 	Drop order: [(86, 20), (86, 21), (90, 10), (86, 13)]	 Service: False	 Pickup: None
+Number: WB24S1026	Number of Passengers: 3		Current Position: 65	 Route : [86, 87, 97, 66, 65, 98, 99, 98, 65, 64, 31, 30, 29, 28] 	Drop order: [(86, 99), (86, 29), (66, 28)]	 Service: False	 Pickup: None
+
+Iteration  5
+Request generated:  (99, 7)
+5	98	99	185
+6	99	99	0
+7	98	99	185
+Source Point: 6
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB78C2237	Number of Passengers: 4		Current Position: 71	 Route : [86, 85, 90, 85, 84, 71, 55, 41, 20, 21, 10, 11, 12, 13] 	Drop order: [(86, 20), (86, 21), (90, 10), (86, 13)]	 Service: False	 Pickup: None
+Number: WB24S1026	Number of Passengers: 3		Current Position: 98	 Route : [86, 87, 97, 66, 65, 98, 99, 98, 65, 64, 31, 30, 29, 28] 	Drop order: [(86, 99), (86, 29), (66, 28)]	 Service: False	 Pickup: None
+
+Iteration  6
+Passenger dropped up at 99 by car WB24S1026
+Request generated:  (99, 2)
+6	99	99	0
+7	98	99	185
+8	65	99	399
+Source Point: 6
+Destination Point: 13
+
+Suitable Shuttles: 
+Distance: 0	 Number: WB24S1026	Number of Passengers: 2		Current Position: 99	 Route : [86, 87, 97, 66, 65, 98, 99, 98, 65, 64, 31, 30, 29, 28] 	Drop order: [(86, 29), (66, 28)]
+Selected Shuttle:  WB24S1026
+Passenger picked up at 99 by shuttle WB24S1026
+
+
+Number: WB78C2237	Number of Passengers: 4		Current Position: 55	 Route : [86, 85, 90, 85, 84, 71, 55, 41, 20, 21, 10, 11, 12, 13] 	Drop order: [(86, 20), (86, 21), (90, 10), (86, 13)]	 Service: False	 Pickup: None
+Number: WB24S1026	Number of Passengers: 3		Current Position: 99	 Route : [86, 87, 97, 66, 65, 98, 99, 98, 65, 64, 31, 30, 29, 28, 2] 	Drop order: [(86, 29), (66, 28), (99, 2)]	 Service: False	 Pickup: None
+
+Iteration  7
+Request generated:  (15, 28)
+5	98	15	4969
+6	99	15	5154
+7	98	15	4969
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB78C2237	Number of Passengers: 4		Current Position: 41	 Route : [86, 85, 90, 85, 84, 71, 55, 41, 20, 21, 10, 11, 12, 13] 	Drop order: [(86, 20), (86, 21), (90, 10), (86, 13)]	 Service: False	 Pickup: None
+Number: WB24S1026	Number of Passengers: 3		Current Position: 98	 Route : [86, 87, 97, 66, 65, 98, 99, 98, 65, 64, 31, 30, 29, 28, 2] 	Drop order: [(86, 29), (66, 28), (99, 2)]	 Service: False	 Pickup: None
+
+Iteration  8
+Passenger dropped up at 20 by car WB78C2237
+Request generated:  (60, 9)
+8	20	60	2097
+9	21	60	1600
+10	10	60	1825
+Source Point: -1
+Destination Point: -1
+4	65	60	1724
+5	98	60	1938
+6	99	60	2123
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB78C2237	Number of Passengers: 3		Current Position: 20	 Route : [86, 85, 90, 85, 84, 71, 55, 41, 20, 21, 10, 11, 12, 13] 	Drop order: [(86, 21), (90, 10), (86, 13)]	 Service: False	 Pickup: None
+Number: WB24S1026	Number of Passengers: 3		Current Position: 65	 Route : [86, 87, 97, 66, 65, 98, 99, 98, 65, 64, 31, 30, 29, 28, 2] 	Drop order: [(86, 29), (66, 28), (99, 2)]	 Service: False	 Pickup: None
+
+Iteration  9
+Passenger dropped up at 21 by car WB78C2237
+Request generated:  (32, 4)
+9	21	32	3083
+10	10	32	3308
+11	11	32	3795
+Source Point: -1
+Destination Point: -1
+9	64	32	662
+10	31	32	329
+11	30	32	606
+Source Point: 10
+Destination Point: 14
+
+Suitable Shuttles: 
+Distance: 662	 Number: WB24S1026	Number of Passengers: 3		Current Position: 64	 Route : [86, 87, 97, 66, 65, 98, 99, 98, 65, 64, 31, 30, 29, 28, 2] 	Drop order: [(86, 29), (66, 28), (99, 2)]
+Selected Shuttle:  WB24S1026
+
+
+Number: WB78C2237	Number of Passengers: 2		Current Position: 21	 Route : [86, 85, 90, 85, 84, 71, 55, 41, 20, 21, 10, 11, 12, 13] 	Drop order: [(90, 10), (86, 13)]	 Service: False	 Pickup: None
+Number: WB24S1026	Number of Passengers: 3		Current Position: 64	 Route : [86, 87, 97, 66, 65, 98, 99, 98, 65, 64, 31, 32, 29, 28, 2, 3, 4] 	Drop order: [(86, 29), (66, 28), (99, 2), (32, 4)]	 Service: True	 Pickup: (32, 4)
+
+Iteration  10
+Passenger dropped up at 10 by car WB78C2237
+Request generated:  (42, 15)
+10	10	42	1397
+11	11	42	885
+12	12	42	514
+Source Point: 12
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB78C2237	Number of Passengers: 1		Current Position: 10	 Route : [86, 85, 90, 85, 84, 71, 55, 41, 20, 21, 10, 11, 12, 13] 	Drop order: [(86, 13)]	 Service: False	 Pickup: None
+Number: WB24S1026	Number of Passengers: 3		Current Position: 31	 Route : [86, 87, 97, 66, 65, 98, 99, 98, 65, 64, 31, 32, 29, 28, 2, 3, 4] 	Drop order: [(86, 29), (66, 28), (99, 2), (32, 4)]	 Service: True	 Pickup: (32, 4)
+
+Iteration  11
+[<__main__.Passenger object at 0x000001F93522F0A0>, <__main__.Passenger object at 0x000001F9352E8EB0>, <__main__.Passenger object at 0x000001F93457C8B0>]
+Passenger picked up at 32 by car WB24S1026
+Request generated:  (77, 28)
+11	11	77	3282
+12	12	77	2911
+13	13	77	2537
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB78C2237	Number of Passengers: 1		Current Position: 11	 Route : [86, 85, 90, 85, 84, 71, 55, 41, 20, 21, 10, 11, 12, 13] 	Drop order: [(86, 13)]	 Service: False	 Pickup: None
+Number: WB24S1026	Number of Passengers: 4		Current Position: 32	 Route : [86, 87, 97, 66, 65, 98, 99, 98, 65, 64, 31, 32, 29, 28, 2, 3, 4] 	Drop order: [(86, 29), (66, 28), (99, 2), (32, 4)]	 Service: False	 Pickup: None
+
+Iteration  12
+Passenger dropped up at 29 by car WB24S1026
+Request generated:  (114, 15)
+12	12	114	3255
+13	13	114	2881
+Source Point: -1
+Destination Point: -1
+12	29	114	3880
+13	28	114	4052
+14	2	114	4330
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB78C2237	Number of Passengers: 1		Current Position: 12	 Route : [86, 85, 90, 85, 84, 71, 55, 41, 20, 21, 10, 11, 12, 13] 	Drop order: [(86, 13)]	 Service: False	 Pickup: None
+Number: WB24S1026	Number of Passengers: 3		Current Position: 29	 Route : [86, 87, 97, 66, 65, 98, 99, 98, 65, 64, 31, 32, 29, 28, 2, 3, 4] 	Drop order: [(66, 28), (99, 2), (32, 4)]	 Service: False	 Pickup: None
+
+Iteration  13
+Passenger dropped up at 13 by car WB78C2237
+Passenger dropped up at 28 by car WB24S1026
+Request generated:  (43, 40)
+13	28	43	3912
+14	2	43	4190
+15	3	43	3983
+Source Point: -1
+Destination Point: -1
+
+Suitable Shuttles: 
+Distance: 516	 Number: WB78C2237	Number of Passengers: 0		Current Position: 13	 Route : [] 	Drop order: []
+Selected Shuttle:  WB78C2237
+
+
+Number: WB78C2237	Number of Passengers: 0		Current Position: 13	 Route : [13, 18, 43, 42, 41, 40] 	Drop order: [(43, 40)]	 Service: True	 Pickup: (43, 40)
+Number: WB24S1026	Number of Passengers: 2		Current Position: 28	 Route : [86, 87, 97, 66, 65, 98, 99, 98, 65, 64, 31, 32, 29, 28, 2, 3, 4] 	Drop order: [(99, 2), (32, 4)]	 Service: False	 Pickup: None
+
+Iteration  14
+Passenger dropped up at 2 by car WB24S1026
+Request generated:  (51, 79)
+14	2	51	3643
+15	3	51	3442
+16	4	51	3026
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB78C2237	Number of Passengers: 0		Current Position: 18	 Route : [13, 18, 43, 42, 41, 40] 	Drop order: [(43, 40)]	 Service: True	 Pickup: (43, 40)
+Number: WB24S1026	Number of Passengers: 1		Current Position: 2	 Route : [86, 87, 97, 66, 65, 98, 99, 98, 65, 64, 31, 32, 29, 28, 2, 3, 4] 	Drop order: [(32, 4)]	 Service: False	 Pickup: None
+
+Iteration  15
+[]
+Passenger picked up at 43 by car WB78C2237
+Request generated:  (108, 0)
+2	43	108	2697
+3	42	108	2892
+4	41	108	2864
+Source Point: -1
+Destination Point: -1
+15	3	108	3481
+16	4	108	3990
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB78C2237	Number of Passengers: 1		Current Position: 43	 Route : [13, 18, 43, 42, 41, 40] 	Drop order: [(43, 40)]	 Service: False	 Pickup: None
+Number: WB24S1026	Number of Passengers: 1		Current Position: 3	 Route : [86, 87, 97, 66, 65, 98, 99, 98, 65, 64, 31, 32, 29, 28, 2, 3, 4] 	Drop order: [(32, 4)]	 Service: False	 Pickup: None
+
+Iteration  16
+Passenger dropped up at 4 by car WB24S1026
+Request generated:  (118, 90)
+3	42	118	3556
+4	41	118	3538
+5	40	118	4040
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB78C2237	Number of Passengers: 1		Current Position: 42	 Route : [13, 18, 43, 42, 41, 40] 	Drop order: [(43, 40)]	 Service: False	 Pickup: None
+Number: WB24S1026	Number of Passengers: 0		Current Position: 4	 Route : [] 	Drop order: []	 Service: False	 Pickup: None
+
+Iteration  17
+Request generated:  (15, 3)
+4	41	15	3252
+5	40	15	3754
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB78C2237	Number of Passengers: 1		Current Position: 41	 Route : [13, 18, 43, 42, 41, 40] 	Drop order: [(43, 40)]	 Service: False	 Pickup: None
+Number: WB24S1026	Number of Passengers: 0		Current Position: 4	 Route : [] 	Drop order: []	 Service: False	 Pickup: None
+
+Iteration  18
+Passenger dropped up at 40 by car WB78C2237
+Request generated:  (22, 6)
+
+Suitable Shuttles: 
+Distance: 696	 Number: WB78C2237	Number of Passengers: 0		Current Position: 40	 Route : [] 	Drop order: []
+Distance: 1941	 Number: WB24S1026	Number of Passengers: 0		Current Position: 4	 Route : [] 	Drop order: []
+Selected Shuttle:  WB78C2237
+
+
+Number: WB78C2237	Number of Passengers: 0		Current Position: 40	 Route : [40, 21, 22, 23, 24, 6] 	Drop order: [(22, 6)]	 Service: True	 Pickup: (22, 6)
+Number: WB24S1026	Number of Passengers: 0		Current Position: 4	 Route : [] 	Drop order: []	 Service: False	 Pickup: None
+
+Iteration  19
+Request generated:  (26, 70)
+
+Suitable Shuttles: 
+Distance: 308	 Number: WB24S1026	Number of Passengers: 0		Current Position: 4	 Route : [] 	Drop order: []
+Selected Shuttle:  WB24S1026
+
+
+Number: WB78C2237	Number of Passengers: 0		Current Position: 21	 Route : [40, 21, 22, 23, 24, 6] 	Drop order: [(22, 6)]	 Service: True	 Pickup: (22, 6)
+Number: WB24S1026	Number of Passengers: 0		Current Position: 4	 Route : [4, 26, 35, 60, 69, 70] 	Drop order: [(26, 70)]	 Service: True	 Pickup: (26, 70)
+
+Iteration  20
+[]
+Passenger picked up at 22 by car WB78C2237
+[]
+Passenger picked up at 26 by car WB24S1026
+Request generated:  (37, 26)
+2	22	37	1136
+3	23	37	881
+4	24	37	314
+Source Point: 4
+Destination Point: 4
+1	26	37	770
+2	35	37	465
+3	60	37	549
+Source Point: 2
+Destination Point: 1
+
+Suitable Shuttles: 
+Distance: 1136	 Number: WB78C2237	Number of Passengers: 1		Current Position: 22	 Route : [40, 21, 22, 23, 24, 6] 	Drop order: [(22, 6)]
+Distance: 770	 Number: WB24S1026	Number of Passengers: 1		Current Position: 26	 Route : [4, 26, 35, 60, 69, 70] 	Drop order: [(26, 70)]
+Selected Shuttle:  WB24S1026
+
+
+Number: WB78C2237	Number of Passengers: 1		Current Position: 22	 Route : [40, 21, 22, 23, 24, 6] 	Drop order: [(22, 6)]	 Service: False	 Pickup: None
+Number: WB24S1026	Number of Passengers: 1		Current Position: 26	 Route : [4, 26, 35, 36, 37, 36, 35, 26, 35, 60, 69, 70] 	Drop order: [(37, 26), (26, 70)]	 Service: True	 Pickup: (37, 26)
+
+Iteration  21
+Request generated:  (101, 79)
+3	23	101	3691
+4	24	101	3154
+5	6	101	3573
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB78C2237	Number of Passengers: 1		Current Position: 23	 Route : [40, 21, 22, 23, 24, 6] 	Drop order: [(22, 6)]	 Service: False	 Pickup: None
+Number: WB24S1026	Number of Passengers: 1		Current Position: 35	 Route : [4, 26, 35, 36, 37, 36, 35, 26, 35, 60, 69, 70] 	Drop order: [(37, 26), (26, 70)]	 Service: True	 Pickup: (37, 26)
+
+Iteration  22
+Request generated:  (58, 56)
+4	24	58	640
+5	6	58	1059
+Source Point: 4
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB78C2237	Number of Passengers: 1		Current Position: 24	 Route : [40, 21, 22, 23, 24, 6] 	Drop order: [(22, 6)]	 Service: False	 Pickup: None
+Number: WB24S1026	Number of Passengers: 1		Current Position: 36	 Route : [4, 26, 35, 36, 37, 36, 35, 26, 35, 60, 69, 70] 	Drop order: [(37, 26), (26, 70)]	 Service: True	 Pickup: (37, 26)
+
+Iteration  23
+Passenger dropped up at 6 by car WB78C2237
+[<__main__.Passenger object at 0x000001F9352E8790>]
+Passenger picked up at 37 by car WB24S1026
+Request generated:  (106, 15)
+4	37	106	3882
+5	36	106	4014
+6	35	106	3888
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB78C2237	Number of Passengers: 0		Current Position: 6	 Route : [] 	Drop order: []	 Service: False	 Pickup: None
+Number: WB24S1026	Number of Passengers: 2		Current Position: 37	 Route : [4, 26, 35, 36, 37, 36, 35, 26, 35, 60, 69, 70] 	Drop order: [(37, 26), (26, 70)]	 Service: False	 Pickup: None
+
+Iteration  24
+Request generated:  (77, 102)
+3	36	77	4013
+4	37	77	3881
+5	36	77	4013
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB78C2237	Number of Passengers: 0		Current Position: 6	 Route : [] 	Drop order: []	 Service: False	 Pickup: None
+Number: WB24S1026	Number of Passengers: 2		Current Position: 36	 Route : [4, 26, 35, 36, 37, 36, 35, 26, 35, 60, 69, 70] 	Drop order: [(37, 26), (26, 70)]	 Service: False	 Pickup: None
+
+Iteration  25
+Request generated:  (23, 81)
+2	35	23	1346
+3	36	23	1120
+4	37	23	881
+Source Point: 4
+Destination Point: -1
+
+Suitable Shuttles: 
+Distance: 1057	 Number: WB78C2237	Number of Passengers: 0		Current Position: 6	 Route : [] 	Drop order: []
+Selected Shuttle:  WB78C2237
+
+
+Number: WB78C2237	Number of Passengers: 0		Current Position: 6	 Route : [6, 24, 23, 38, 57, 70, 71, 72, 73, 51, 50, 76, 81] 	Drop order: [(23, 81)]	 Service: True	 Pickup: (23, 81)
+Number: WB24S1026	Number of Passengers: 2		Current Position: 35	 Route : [4, 26, 35, 36, 37, 36, 35, 26, 35, 60, 69, 70] 	Drop order: [(37, 26), (26, 70)]	 Service: False	 Pickup: None
+
+Iteration  26
+Passenger dropped up at 26 by car WB24S1026
+Request generated:  (112, 6)
+1	26	112	4030
+2	35	112	3725
+3	36	112	3863
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB78C2237	Number of Passengers: 0		Current Position: 24	 Route : [6, 24, 23, 38, 57, 70, 71, 72, 73, 51, 50, 76, 81] 	Drop order: [(23, 81)]	 Service: True	 Pickup: (23, 81)
+Number: WB24S1026	Number of Passengers: 1		Current Position: 26	 Route : [4, 26, 35, 36, 37, 36, 35, 26, 35, 60, 69, 70] 	Drop order: [(26, 70)]	 Service: False	 Pickup: None
+
+Iteration  27
+[]
+Passenger picked up at 23 by car WB78C2237
+Request generated:  (2, 80)
+2	23	2	2470
+3	38	2	2492
+4	57	2	2514
+Source Point: -1
+Destination Point: -1
+2	35	2	1432
+3	36	2	1658
+4	37	2	1897
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB78C2237	Number of Passengers: 1		Current Position: 23	 Route : [6, 24, 23, 38, 57, 70, 71, 72, 73, 51, 50, 76, 81] 	Drop order: [(23, 81)]	 Service: False	 Pickup: None
+Number: WB24S1026	Number of Passengers: 1		Current Position: 35	 Route : [4, 26, 35, 36, 37, 36, 35, 26, 35, 60, 69, 70] 	Drop order: [(26, 70)]	 Service: False	 Pickup: None
+
+Iteration  28
+Request generated:  (116, 118)
+3	38	116	3918
+4	57	116	3568
+5	70	116	3343
+Source Point: -1
+Destination Point: -1
+9	60	116	4075
+10	69	116	3853
+11	70	116	3343
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB78C2237	Number of Passengers: 1		Current Position: 38	 Route : [6, 24, 23, 38, 57, 70, 71, 72, 73, 51, 50, 76, 81] 	Drop order: [(23, 81)]	 Service: False	 Pickup: None
+Number: WB24S1026	Number of Passengers: 1		Current Position: 60	 Route : [4, 26, 35, 36, 37, 36, 35, 26, 35, 60, 69, 70] 	Drop order: [(26, 70)]	 Service: False	 Pickup: None
+
+Iteration  29
+Request generated:  (119, 34)
+4	57	119	4131
+5	70	119	3906
+6	71	119	3351
+Source Point: -1
+Destination Point: -1
+10	69	119	3607
+11	70	119	3906
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB78C2237	Number of Passengers: 1		Current Position: 57	 Route : [6, 24, 23, 38, 57, 70, 71, 72, 73, 51, 50, 76, 81] 	Drop order: [(23, 81)]	 Service: False	 Pickup: None
+Number: WB24S1026	Number of Passengers: 1		Current Position: 69	 Route : [4, 26, 35, 36, 37, 36, 35, 26, 35, 60, 69, 70] 	Drop order: [(26, 70)]	 Service: False	 Pickup: None
+
+Iteration  30
+Passenger dropped up at 70 by car WB24S1026
+Request generated:  (81, 37)
+5	70	81	2680
+6	71	81	2125
+7	72	81	1877
+Source Point: -1
+Destination Point: -1
+
+Suitable Shuttles: 
+Distance: 2680	 Number: WB24S1026	Number of Passengers: 0		Current Position: 70	 Route : [] 	Drop order: []
+Selected Shuttle:  WB24S1026
+
+
+Number: WB78C2237	Number of Passengers: 1		Current Position: 70	 Route : [6, 24, 23, 38, 57, 70, 71, 72, 73, 51, 50, 76, 81] 	Drop order: [(23, 81)]	 Service: False	 Pickup: None
+Number: WB24S1026	Number of Passengers: 0		Current Position: 70	 Route : [70, 71, 72, 73, 51, 50, 76, 81, 76, 50, 51, 73, 72, 71, 70, 69, 58, 37] 	Drop order: [(81, 37)]	 Service: True	 Pickup: (81, 37)

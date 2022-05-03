@@ -1,0 +1,24 @@
+Iteration  9
+Request generated:  (64, 37)
+
+No suitable shuttles
+
+
+Number: WB40A9917	Number of Passengers: 3		Current Position: 41	 Route : [86, 85, 84, 71, 72, 71, 84, 71, 55, 41, 20, 21, 20, 19, 18, 13] 	Drop order: [(86, 20), (86, 21), (86, 13)]	 Service: False	 Pickup: None
+Number: WB62N5435	Number of Passengers: 1		Current Position: 31	 Route : [86, 87, 97, 100, 98, 99, 98, 65, 64, 31, 30, 29] 	Drop order: [(86, 29)]	 Service: False	 Pickup: None
+Continue? 1
+
+Iteration  10
+Passenger dropped up at 20 by car WB40A9917
+Request generated:  (28, 27)
+
+Suitable Shuttles: 
+Distance: 627	 Number: WB62N5435	Number of Passengers: 1		Current Position: 30	 Route : [86, 87, 97, 100, 98, 99, 98, 65, 64, 31, 30, 29] 	Drop order: [(86, 29)]
+Selected Shuttle:  WB62N5435
+
+
+Number: WB40A9917	Number of Passengers: 2		Current Position: 20	 Route : [86, 85, 84, 71, 72, 71, 84, 71, 55, 41, 20, 21, 20, 19, 18, 13] 	Drop order: [(86, 21), (86, 13)]	 Service: False	 Pickup: None
+Number: WB62N5435	Number of Passengers: 1		Current Position: 30	 Route : [86, 87, 97, 100, 98, 99, 98, 65, 64, 31, 30, 29, 28, 27, 28, 29] 	Drop order: [(28, 27), (86, 29)]	 Service: True	 Pickup: (28, 27)
+
+Route : [86, 85, 84, 71, 55, 41, 20, 21, 20, 19, 18, 13] 	Drop order: [(86, 20), (86, 21), (86, 13)]
+Route : [86, 87, 97, 100, 98, 99, 98, 65, 64, 31, 30, 29] 	Drop order: [(86, 99), (86, 29)]
