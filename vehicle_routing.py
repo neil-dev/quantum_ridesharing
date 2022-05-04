@@ -18,15 +18,14 @@ class VehicleRouter:
         """Initializes the VRP by storing all inputs, initializing variables for storing the quadratic structures and
         results and calls the rebuild function to build all quadratic structures.
         Args:
-            n_clients: No. of nodes in the problem (excluding the depot).
-            n_vehicles: No. of vehicles available for delivery.
+            n_clients: No. of nodes in the problem (excluding the hub).
+            n_vehicles: No. of vehicles available for service.
             cost_matrix: (n_clients + 1) x (n_clients + 1) matrix describing the cost of moving from node i to node j.
             penalty: Penalty value to use for constraints in the QUBO. Defaults to automatic calculation by qiskit
                 converters.
             chain_strength: Chain strength to be used for D-Wave sampler. Defaults to automatic chain strength
                 calculation via uniform torque compensation.
             num_reads: Number of samples to read. Defaults to 1000.
-            solver: Select a backend solver. Defaults to 'dwave'.
         """
 
         # Store critical inputs

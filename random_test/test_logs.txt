@@ -1,0 +1,490 @@
+	###Simulation Starting###
+
+
+Iteration  1
+Hello
+Request generated:  (15, 105)
+1	68	15	4231
+2	69	15	3818
+3	58	15	4035
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB98D2635	Number of Passengers: 1		Current Position: 68	Route : [86, 68, 69, 58, 59, 36]	Drop order: [(86, 36)]	Service: False	Pickup: None
+Number: WB56W2715	Number of Passengers: 4		Current Position: 68	Route : [86, 68, 69, 70, 56, 55, 54, 53, 42, 19, 20, 11, 20, 19, 42, 53, 52, 51, 50, 76, 77, 80]	Drop order: [(86, 56), (86, 53), (86, 11), (86, 80)]	Service: False	Pickup: None
+
+Iteration  2
+Hello
+Request generated:  (78, 36)
+2	69	78	3863
+3	58	78	4080
+4	59	78	4194
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB98D2635	Number of Passengers: 1		Current Position: 69	Route : [86, 68, 69, 58, 59, 36]	Drop order: [(86, 36)]	Service: False	Pickup: None
+Number: WB56W2715	Number of Passengers: 4		Current Position: 69	Route : [86, 68, 69, 70, 56, 55, 54, 53, 42, 19, 20, 11, 20, 19, 42, 53, 52, 51, 50, 76, 77, 80]	Drop order: [(86, 56), (86, 53), (86, 11), (86, 80)]	Service: False	Pickup: None
+
+Iteration  3
+Hello
+Request generated:  (76, 55)
+3	58	76	3055
+4	59	76	3169
+5	36	76	3513
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB98D2635	Number of Passengers: 1		Current Position: 58	Route : [86, 68, 69, 58, 59, 36]	Drop order: [(86, 36)]	Service: False	Pickup: None
+Number: WB56W2715	Number of Passengers: 4		Current Position: 70	Route : [86, 68, 69, 70, 56, 55, 54, 53, 42, 19, 20, 11, 20, 19, 42, 53, 52, 51, 50, 76, 77, 80]	Drop order: [(86, 56), (86, 53), (86, 11), (86, 80)]	Service: False	Pickup: None
+
+Iteration  4
+Passenger dropped up at 56 by car WB56W2715
+Hello
+Request generated:  (33, 32)
+4	59	33	1257
+5	36	33	1071
+Source Point: -1
+Destination Point: -1
+4	56	33	2131
+5	55	33	2640
+6	54	33	2886
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB98D2635	Number of Passengers: 1		Current Position: 59	Route : [86, 68, 69, 58, 59, 36]	Drop order: [(86, 36)]	Service: False	Pickup: None
+Number: WB56W2715	Number of Passengers: 3		Current Position: 56	Route : [86, 68, 69, 70, 56, 55, 54, 53, 42, 19, 20, 11, 20, 19, 42, 53, 52, 51, 50, 76, 77, 80]	Drop order: [(86, 53), (86, 11), (86, 80)]	Service: False	Pickup: None
+
+Iteration  5
+Passenger dropped up at 36 by car WB98D2635
+Hello
+Request generated:  (18, 8)
+5	55	18	1363
+6	54	18	1117
+7	53	18	981
+Source Point: 7
+Destination Point: -1
+
+Suitable Shuttles: 
+Distance: 2976	 Number: WB98D2635	Number of Passengers: 0		Current Position: 36	 Route : [] 	Drop order: []
+Selected Shuttle:  WB98D2635
+
+
+Number: WB98D2635	Number of Passengers: 0		Current Position: 36	Route : [36, 37, 38, 39, 40, 41, 20, 19, 18, 19, 20, 21, 22, 9, 8]	Drop order: [(18, 8)]	Service: True	Pickup: (18, 8)
+Number: WB56W2715	Number of Passengers: 3		Current Position: 55	Route : [86, 68, 69, 70, 56, 55, 54, 53, 42, 19, 20, 11, 20, 19, 42, 53, 52, 51, 50, 76, 77, 80]	Drop order: [(86, 53), (86, 11), (86, 80)]	Service: False	Pickup: None
+
+Iteration  6
+Hello
+Request generated:  (8, 44)
+6	54	8	2039
+7	53	8	2175
+8	42	8	2129
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB98D2635	Number of Passengers: 0		Current Position: 37	Route : [36, 37, 38, 39, 40, 41, 20, 19, 18, 19, 20, 21, 22, 9, 8]	Drop order: [(18, 8)]	Service: True	Pickup: (18, 8)
+Number: WB56W2715	Number of Passengers: 3		Current Position: 54	Route : [86, 68, 69, 70, 56, 55, 54, 53, 42, 19, 20, 11, 20, 19, 42, 53, 52, 51, 50, 76, 77, 80]	Drop order: [(86, 53), (86, 11), (86, 80)]	Service: False	Pickup: None
+
+Iteration  7
+Passenger dropped up at 53 by car WB56W2715
+Hello
+Request generated:  (37, 16)
+7	53	37	1977
+8	42	37	2065
+9	19	37	2356
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB98D2635	Number of Passengers: 0		Current Position: 38	Route : [36, 37, 38, 39, 40, 41, 20, 19, 18, 19, 20, 21, 22, 9, 8]	Drop order: [(18, 8)]	Service: True	Pickup: (18, 8)
+Number: WB56W2715	Number of Passengers: 2		Current Position: 53	Route : [86, 68, 69, 70, 56, 55, 54, 53, 42, 19, 20, 11, 20, 19, 42, 53, 52, 51, 50, 76, 77, 80]	Drop order: [(86, 11), (86, 80)]	Service: False	Pickup: None
+
+Iteration  8
+Hello
+Request generated:  (94, 8)
+8	42	94	2603
+9	19	94	2896
+10	20	94	2872
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB98D2635	Number of Passengers: 0		Current Position: 39	Route : [36, 37, 38, 39, 40, 41, 20, 19, 18, 19, 20, 21, 22, 9, 8]	Drop order: [(18, 8)]	Service: True	Pickup: (18, 8)
+Number: WB56W2715	Number of Passengers: 2		Current Position: 42	Route : [86, 68, 69, 70, 56, 55, 54, 53, 42, 19, 20, 11, 20, 19, 42, 53, 52, 51, 50, 76, 77, 80]	Drop order: [(86, 11), (86, 80)]	Service: False	Pickup: None
+
+Iteration  9
+Hello
+Request generated:  (16, 113)
+9	19	16	2799
+10	20	16	3176
+11	11	16	3391
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB98D2635	Number of Passengers: 0		Current Position: 40	Route : [36, 37, 38, 39, 40, 41, 20, 19, 18, 19, 20, 21, 22, 9, 8]	Drop order: [(18, 8)]	Service: True	Pickup: (18, 8)
+Number: WB56W2715	Number of Passengers: 2		Current Position: 19	Route : [86, 68, 69, 70, 56, 55, 54, 53, 42, 19, 20, 11, 20, 19, 42, 53, 52, 51, 50, 76, 77, 80]	Drop order: [(86, 11), (86, 80)]	Service: False	Pickup: None
+
+Iteration  10
+Hello
+Request generated:  (79, 92)
+10	20	79	3898
+11	11	79	4113
+12	20	79	3898
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB98D2635	Number of Passengers: 0		Current Position: 41	Route : [36, 37, 38, 39, 40, 41, 20, 19, 18, 19, 20, 21, 22, 9, 8]	Drop order: [(18, 8)]	Service: True	Pickup: (18, 8)
+Number: WB56W2715	Number of Passengers: 2		Current Position: 20	Route : [86, 68, 69, 70, 56, 55, 54, 53, 42, 19, 20, 11, 20, 19, 42, 53, 52, 51, 50, 76, 77, 80]	Drop order: [(86, 11), (86, 80)]	Service: False	Pickup: None
+
+Iteration  11
+Passenger dropped up at 11 by car WB56W2715
+Hello
+Request generated:  (4, 22)
+11	11	4	3053
+12	20	4	2838
+13	19	4	3215
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB98D2635	Number of Passengers: 0		Current Position: 20	Route : [36, 37, 38, 39, 40, 41, 20, 19, 18, 19, 20, 21, 22, 9, 8]	Drop order: [(18, 8)]	Service: True	Pickup: (18, 8)
+Number: WB56W2715	Number of Passengers: 1		Current Position: 11	Route : [86, 68, 69, 70, 56, 55, 54, 53, 42, 19, 20, 11, 20, 19, 42, 53, 52, 51, 50, 76, 77, 80]	Drop order: [(86, 80)]	Service: False	Pickup: None
+
+Iteration  12
+Hello
+Request generated:  (6, 90)
+10	20	6	2244
+11	11	6	2138
+12	20	6	2244
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB98D2635	Number of Passengers: 0		Current Position: 19	Route : [36, 37, 38, 39, 40, 41, 20, 19, 18, 19, 20, 21, 22, 9, 8]	Drop order: [(18, 8)]	Service: True	Pickup: (18, 8)
+Number: WB56W2715	Number of Passengers: 1		Current Position: 20	Route : [86, 68, 69, 70, 56, 55, 54, 53, 42, 19, 20, 11, 20, 19, 42, 53, 52, 51, 50, 76, 77, 80]	Drop order: [(86, 80)]	Service: False	Pickup: None
+
+Iteration  13
+Passenger picked up at 18 by car WB98D2635
+Hello
+Request generated:  (73, 88)
+8	18	73	1204
+9	19	73	1113
+10	20	73	1235
+Source Point: -1
+Destination Point: -1
+9	19	73	1113
+10	20	73	1235
+11	11	73	1450
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB98D2635	Number of Passengers: 1		Current Position: 18	Route : [36, 37, 38, 39, 40, 41, 20, 19, 18, 19, 20, 21, 22, 9, 8]	Drop order: [(18, 8)]	Service: False	Pickup: None
+Number: WB56W2715	Number of Passengers: 1		Current Position: 19	Route : [86, 68, 69, 70, 56, 55, 54, 53, 42, 19, 20, 11, 20, 19, 42, 53, 52, 51, 50, 76, 77, 80]	Drop order: [(86, 80)]	Service: False	Pickup: None
+
+Iteration  14
+Hello
+Request generated:  (87, 75)
+7	19	87	2699
+8	18	87	2939
+9	19	87	2699
+Source Point: -1
+Destination Point: -1
+8	42	87	2406
+9	19	87	2699
+10	20	87	2338
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB98D2635	Number of Passengers: 1		Current Position: 19	Route : [36, 37, 38, 39, 40, 41, 20, 19, 18, 19, 20, 21, 22, 9, 8]	Drop order: [(18, 8)]	Service: False	Pickup: None
+Number: WB56W2715	Number of Passengers: 1		Current Position: 42	Route : [86, 68, 69, 70, 56, 55, 54, 53, 42, 19, 20, 11, 20, 19, 42, 53, 52, 51, 50, 76, 77, 80]	Drop order: [(86, 80)]	Service: False	Pickup: None
+
+Iteration  15
+Hello
+Request generated:  (104, 114)
+6	20	104	2601
+7	19	104	2479
+8	18	104	2290
+Source Point: -1
+Destination Point: -1
+7	53	104	1874
+8	42	104	2186
+9	19	104	2479
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB98D2635	Number of Passengers: 1		Current Position: 20	Route : [36, 37, 38, 39, 40, 41, 20, 19, 18, 19, 20, 21, 22, 9, 8]	Drop order: [(18, 8)]	Service: False	Pickup: None
+Number: WB56W2715	Number of Passengers: 1		Current Position: 53	Route : [86, 68, 69, 70, 56, 55, 54, 53, 42, 19, 20, 11, 20, 19, 42, 53, 52, 51, 50, 76, 77, 80]	Drop order: [(86, 80)]	Service: False	Pickup: None
+
+Iteration  16
+Hello
+Request generated:  (42, 36)
+11	21	42	1173
+12	22	42	1567
+13	9	42	1792
+Source Point: -1
+Destination Point: -1
+16	52	42	686
+17	51	42	923
+18	50	42	1563
+Source Point: 16
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB98D2635	Number of Passengers: 1		Current Position: 21	Route : [36, 37, 38, 39, 40, 41, 20, 19, 18, 19, 20, 21, 22, 9, 8]	Drop order: [(18, 8)]	Service: False	Pickup: None
+Number: WB56W2715	Number of Passengers: 1		Current Position: 52	Route : [86, 68, 69, 70, 56, 55, 54, 53, 42, 19, 20, 11, 20, 19, 42, 53, 52, 51, 50, 76, 77, 80]	Drop order: [(86, 80)]	Service: False	Pickup: None
+
+Iteration  17
+Hello
+Request generated:  (69, 23)
+12	22	69	1448
+13	9	69	1673
+14	8	69	1851
+Source Point: -1
+Destination Point: -1
+17	51	69	1864
+18	50	69	2504
+19	76	69	2838
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB98D2635	Number of Passengers: 1		Current Position: 22	Route : [36, 37, 38, 39, 40, 41, 20, 19, 18, 19, 20, 21, 22, 9, 8]	Drop order: [(18, 8)]	Service: False	Pickup: None
+Number: WB56W2715	Number of Passengers: 1		Current Position: 51	Route : [86, 68, 69, 70, 56, 55, 54, 53, 42, 19, 20, 11, 20, 19, 42, 53, 52, 51, 50, 76, 77, 80]	Drop order: [(86, 80)]	Service: False	Pickup: None
+
+Iteration  18
+Hello
+Request generated:  (74, 10)
+13	9	74	2838
+14	8	74	3016
+Source Point: -1
+Destination Point: -1
+18	50	74	1046
+19	76	74	1380
+20	77	74	1880
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB98D2635	Number of Passengers: 1		Current Position: 9	Route : [36, 37, 38, 39, 40, 41, 20, 19, 18, 19, 20, 21, 22, 9, 8]	Drop order: [(18, 8)]	Service: False	Pickup: None
+Number: WB56W2715	Number of Passengers: 1		Current Position: 50	Route : [86, 68, 69, 70, 56, 55, 54, 53, 42, 19, 20, 11, 20, 19, 42, 53, 52, 51, 50, 76, 77, 80]	Drop order: [(86, 80)]	Service: False	Pickup: None
+
+Iteration  19
+Passenger dropped up at 8 by car WB98D2635
+Hello
+Request generated:  (54, 13)
+19	76	54	1706
+20	77	54	2206
+21	80	54	2598
+Source Point: -1
+Destination Point: -1
+
+Suitable Shuttles: 
+Distance: 2039	 Number: WB98D2635	Number of Passengers: 0		Current Position: 8	 Route : [] 	Drop order: []
+Selected Shuttle:  WB98D2635
+
+
+Number: WB98D2635	Number of Passengers: 0		Current Position: 8	Route : [8, 23, 38, 57, 56, 55, 54, 53, 52, 43, 18, 13]	Drop order: [(54, 13)]	Service: True	Pickup: (54, 13)
+Number: WB56W2715	Number of Passengers: 1		Current Position: 76	Route : [86, 68, 69, 70, 56, 55, 54, 53, 42, 19, 20, 11, 20, 19, 42, 53, 52, 51, 50, 76, 77, 80]	Drop order: [(86, 80)]	Service: False	Pickup: None
+
+Iteration  20
+Hello
+Request generated:  (109, 54)
+20	77	109	3334
+21	80	109	2970
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB98D2635	Number of Passengers: 0		Current Position: 23	Route : [8, 23, 38, 57, 56, 55, 54, 53, 52, 43, 18, 13]	Drop order: [(54, 13)]	Service: True	Pickup: (54, 13)
+Number: WB56W2715	Number of Passengers: 1		Current Position: 77	Route : [86, 68, 69, 70, 56, 55, 54, 53, 42, 19, 20, 11, 20, 19, 42, 53, 52, 51, 50, 76, 77, 80]	Drop order: [(86, 80)]	Service: False	Pickup: None
+
+Iteration  21
+Passenger dropped up at 80 by car WB56W2715
+Hello
+Request generated:  (109, 105)
+
+Suitable Shuttles: 
+Distance: 2970	 Number: WB56W2715	Number of Passengers: 0		Current Position: 80	 Route : [] 	Drop order: []
+Selected Shuttle:  WB56W2715
+
+
+Number: WB98D2635	Number of Passengers: 0		Current Position: 38	Route : [8, 23, 38, 57, 56, 55, 54, 53, 52, 43, 18, 13]	Drop order: [(54, 13)]	Service: True	Pickup: (54, 13)
+Number: WB56W2715	Number of Passengers: 0		Current Position: 80	Route : [80, 81, 82, 105, 106, 107, 108, 109, 108, 107, 106, 105]	Drop order: [(109, 105)]	Service: True	Pickup: (109, 105)
+
+Iteration  22
+Hello
+Request generated:  (25, 116)
+
+No suitable shuttles
+
+
+Number: WB98D2635	Number of Passengers: 0		Current Position: 57	Route : [8, 23, 38, 57, 56, 55, 54, 53, 52, 43, 18, 13]	Drop order: [(54, 13)]	Service: True	Pickup: (54, 13)
+Number: WB56W2715	Number of Passengers: 0		Current Position: 81	Route : [80, 81, 82, 105, 106, 107, 108, 109, 108, 107, 106, 105]	Drop order: [(109, 105)]	Service: True	Pickup: (109, 105)
+
+Iteration  23
+Hello
+Request generated:  (45, 8)
+
+No suitable shuttles
+
+
+Number: WB98D2635	Number of Passengers: 0		Current Position: 56	Route : [8, 23, 38, 57, 56, 55, 54, 53, 52, 43, 18, 13]	Drop order: [(54, 13)]	Service: True	Pickup: (54, 13)
+Number: WB56W2715	Number of Passengers: 0		Current Position: 82	Route : [80, 81, 82, 105, 106, 107, 108, 109, 108, 107, 106, 105]	Drop order: [(109, 105)]	Service: True	Pickup: (109, 105)
+
+Iteration  24
+Hello
+Request generated:  (43, 106)
+
+No suitable shuttles
+
+
+Number: WB98D2635	Number of Passengers: 0		Current Position: 55	Route : [8, 23, 38, 57, 56, 55, 54, 53, 52, 43, 18, 13]	Drop order: [(54, 13)]	Service: True	Pickup: (54, 13)
+Number: WB56W2715	Number of Passengers: 0		Current Position: 105	Route : [80, 81, 82, 105, 106, 107, 108, 109, 108, 107, 106, 105]	Drop order: [(109, 105)]	Service: True	Pickup: (109, 105)
+
+Iteration  25
+Passenger picked up at 54 by car WB98D2635
+Hello
+Request generated:  (56, 5)
+6	54	56	755
+7	53	56	891
+8	52	56	1265
+Source Point: 6
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB98D2635	Number of Passengers: 1		Current Position: 54	Route : [8, 23, 38, 57, 56, 55, 54, 53, 52, 43, 18, 13]	Drop order: [(54, 13)]	Service: False	Pickup: None
+Number: WB56W2715	Number of Passengers: 0		Current Position: 106	Route : [80, 81, 82, 105, 106, 107, 108, 109, 108, 107, 106, 105]	Drop order: [(109, 105)]	Service: True	Pickup: (109, 105)
+
+Iteration  26
+Hello
+Request generated:  (98, 4)
+7	53	98	3097
+8	52	98	3252
+9	43	98	3562
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB98D2635	Number of Passengers: 1		Current Position: 53	Route : [8, 23, 38, 57, 56, 55, 54, 53, 52, 43, 18, 13]	Drop order: [(54, 13)]	Service: False	Pickup: None
+Number: WB56W2715	Number of Passengers: 0		Current Position: 107	Route : [80, 81, 82, 105, 106, 107, 108, 109, 108, 107, 106, 105]	Drop order: [(109, 105)]	Service: True	Pickup: (109, 105)
+
+Iteration  27
+Hello
+Request generated:  (17, 42)
+8	52	17	2234
+9	43	17	2544
+10	18	17	2841
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB98D2635	Number of Passengers: 1		Current Position: 52	Route : [8, 23, 38, 57, 56, 55, 54, 53, 52, 43, 18, 13]	Drop order: [(54, 13)]	Service: False	Pickup: None
+Number: WB56W2715	Number of Passengers: 0		Current Position: 108	Route : [80, 81, 82, 105, 106, 107, 108, 109, 108, 107, 106, 105]	Drop order: [(109, 105)]	Service: True	Pickup: (109, 105)
+
+Iteration  28
+Passenger picked up at 109 by car WB56W2715
+Hello
+Request generated:  (31, 52)
+9	43	31	4214
+10	18	31	4511
+11	13	31	4730
+Source Point: -1
+Destination Point: -1
+7	109	31	2320
+8	108	31	2698
+9	107	31	3105
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB98D2635	Number of Passengers: 1		Current Position: 43	Route : [8, 23, 38, 57, 56, 55, 54, 53, 52, 43, 18, 13]	Drop order: [(54, 13)]	Service: False	Pickup: None
+Number: WB56W2715	Number of Passengers: 1		Current Position: 109	Route : [80, 81, 82, 105, 106, 107, 108, 109, 108, 107, 106, 105]	Drop order: [(109, 105)]	Service: False	Pickup: None
+
+Iteration  29
+Hello
+Request generated:  (26, 80)
+10	18	26	3288
+11	13	26	3507
+Source Point: -1
+Destination Point: -1
+6	108	26	3682
+7	109	26	3687
+8	108	26	3682
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB98D2635	Number of Passengers: 1		Current Position: 18	Route : [8, 23, 38, 57, 56, 55, 54, 53, 52, 43, 18, 13]	Drop order: [(54, 13)]	Service: False	Pickup: None
+Number: WB56W2715	Number of Passengers: 1		Current Position: 108	Route : [80, 81, 82, 105, 106, 107, 108, 109, 108, 107, 106, 105]	Drop order: [(109, 105)]	Service: False	Pickup: None
+
+Iteration  30
+Passenger dropped up at 13 by car WB98D2635
+Hello
+Request generated:  (99, 33)
+5	107	99	2451
+6	108	99	2044
+7	109	99	1656
+Source Point: -1
+Destination Point: -1
+
+No suitable shuttles
+
+
+Number: WB98D2635	Number of Passengers: 0		Current Position: 13	Route : []	Drop order: []	Service: False	Pickup: None
+Number: WB56W2715	Number of Passengers: 1		Current Position: 107	Route : [80, 81, 82, 105, 106, 107, 108, 109, 108, 107, 106, 105]	Drop order: [(109, 105)]	Service: False	Pickup: None
+​

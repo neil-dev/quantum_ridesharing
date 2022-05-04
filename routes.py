@@ -4,6 +4,9 @@ from constants import dist_matrix, coordinates
 
 class Node:
     def __init__(self, parent=None, position=None):
+        """Initializing a node.
+
+        """
         self.parent = parent
         self.position = position
 
@@ -16,8 +19,11 @@ class Node:
 
 
 def return_path(current_node):
-    """
-        Recreates the path from the current node to the starting node.
+
+    """Recreates the path from the current node to the starting node.
+    Args:
+        current_node: The current node under consideration.
+    Returns: A list containing the path from the starting node to the current node.
     """
 
     path = []
@@ -30,7 +36,13 @@ def return_path(current_node):
 
 
 def join_route(route1, route2):
-    """This function adds the contents of the second list to the first list and returns it."""
+    """Add the contents of the second list to the first list.
+    Args:
+        route1: List denoting the 1st route.
+        route2: List denoting the route to be merged with the 1st route.
+    Returns:
+        A list with the 2nd route appended to the 1st route.
+    """
     for i in route2:
         route1.append(i)
     return route1
@@ -53,7 +65,10 @@ class Route:
         self.distance = None
 
     def neighbour(self, node):
-        """This function returns the list of neighbours of a node."""
+        """This function returns the list of neighbours of a node.
+        Args:
+            node: The index of the node in consideration.
+        """
         nb = np.array([], dtype=np.int8)
         for i in range(self.total_nodes):
             if dist_matrix[node][i] > 0:
