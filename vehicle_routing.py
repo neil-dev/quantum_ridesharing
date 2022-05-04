@@ -11,7 +11,7 @@ from qiskit_optimization.algorithms import OptimizationResult
 
 class VehicleRouter:
     """Abstract Class for solving the Vehicle Routing Problem. To build a VRP solver, simply inherit from this class
-    and overide the build_quadratic_program function in this class."""
+    and override the build_quadratic_program function in this class."""
 
     def __init__(self, n_clients, n_vehicles, cost_matrix, **params):
 
@@ -61,7 +61,7 @@ class VehicleRouter:
 
     def build_quadratic_program(self):
 
-        """Dummy function to be overriden in child class. Required to set self.variables to contain the names of all
+        """Dummy function to be overridden in child class. Required to set self.variables to contain the names of all
         variables in the form of a numpy array and self.qp to contain the quadratic program to be solved."""
 
         # Dummy. Override in child class.
@@ -158,7 +158,10 @@ class VehicleRouter:
 
     def get_clusters(self):
 
-        """Retrieve the clusters from the solution."""
+        """Retrieve the clusters from the solution.
+        Returns:
+            A 2-D list of lists where each list contains the indices of the requests in that cluster.
+        """
 
         clusters = []
         for i in range(self.solution.shape[0]):
