@@ -10,6 +10,8 @@ def generate_initial_requests(n, center, total_nodes):
         n: No. of nodes excluding the shuttle stand.
         center: Index of the node considered as the shuttle stand.
         total_nodes: Total number of nodes
+    Returns:
+        A numpy array of size n containing the initial requests.
     """
     requests = np.zeros(n, dtype=np.int8)
     i = 0
@@ -53,6 +55,16 @@ def generate_vrp_instance(n, center, requests):
 
 
 def generate_cluster_route(center, requests, cluster):
+    """Generate the route for a particular cluster.
+    Args:
+        center: Index of the node considered as the shuttle stand.
+        requests: The initial batch of drop requests.
+        cluster: The cluster for which the route is to be generated.
+    Returns:
+        A path for the cluster, and a list containing the order in which the requests belonging to the cluster are
+        serviced.
+    """
+
     path = []
     edge = []
     drop_order = []
