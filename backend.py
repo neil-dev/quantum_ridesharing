@@ -11,21 +11,16 @@ class Backend:
         self.vrp = vrp
 
         # Initialize necessary variables
-        self.dwave_result = None
         self.result_dict = None
 
     def solve(self):
-        """Takes the solver as input and redirects control to the corresponding solver.
-        Args:
-            params: Parameters to send to the selected backend solver.
-        """
+        """Takes the solver as input and redirects control to the corresponding solver."""
 
         # Call Leap Solver
         self.solve_leap()
 
     def solve_leap(self):
-        """Solve using Leap Hybrid Sampler.
-        """
+        """Solve using Leap Hybrid Sampler."""
 
         # Solve
         sampler = LeapHybridSampler()
