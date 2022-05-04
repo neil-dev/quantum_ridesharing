@@ -56,24 +56,18 @@ class QuboSolver(VehicleRouter):
 
         # Add capacity constraints
         for i in range(self.m):
-            constraint = {self.variables[i, j + 1, k]: 1 for j in range(self.n) for k in range(self.n)}
-            self.qp.linear_constraint(linear=constraint, sense='<=', rhs=4, name=f'capacity_{i}')
+            constraint_linear = {self.variables[i, j + 1, k]: 1 for j in range(self.n) for k in range(self.n)}
+            self.qp.linear_constraint(linear=constraint_linear, sense='<=', rhs=4, name=f'capacity_{i}')
 
-    def visualize(self, xc=None, yc=None, labels=None):
+    def visualize(self, xc, yc):
 
         """Visualizes solution.
         Args:
-            xc: x coordinates of nodes. Defaults to random values.
-            yc: y coordinates of nodes. Defaults to random values.
+            xc: x coordinates of nodes.
+            yc: y coordinates of nodes.
         """
 
-        # Resolve coordinates
-        if xc is None:
-            xc = (np.random.rand(self.n + 1) - 0.5) * 10
-        if yc is None:
-            yc = (np.random.rand(self.n + 1) - 0.5) * 10
-        if labels is None:
-            labels = {i: str(i) for i in range(self.n + 1)}
+        labels = {0: "O", 1: "A", 2: "B", 3: "C", 4: "D", 5: "E"}
 
         # Initialize figure
         plt.figure()
@@ -82,7 +76,7 @@ class QuboSolver(VehicleRouter):
         cmap = plt.cm.get_cmap('Accent')
 
         # Build graph
-        G = nx.MultiDiGraph()
+        G = nx.MultiGraph()
         G.add_nodes_from(range(self.n + 1))
 
         # Plot nodes

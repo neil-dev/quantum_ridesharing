@@ -1,4 +1,5 @@
 import numpy as np
+from constants import dist_matrix, coordinates
 
 
 class Node:
@@ -28,30 +29,39 @@ def return_path(current_node):
     return path
 
 
+def join_route(route1, route2):
+    """This function adds the contents of the second list to the first list and returns it."""
+    for i in route2:
+        route1.append(i)
+    return route1
+
+
+def route_distance(route):
+    """Takes a route as a parameter and returns the distance of travelled on that route."""
+    distance = 0
+    for i in range(1, len(route)):
+        distance += dist_matrix[route[i - 1]][route[i]]
+    return distance
+
+
 class Route:
 
-    def __init__(self, dist_matrix, coordinates):
-        self.dist_matrix = dist_matrix
-        self.coordinates = coordinates
+    def __init__(self):
         self.total_nodes = dist_matrix.shape[0]
         self.start = None
         self.end = None
         self.distance = None
 
     def neighbour(self, node):
-        """
-            This function returns the list of neighbours of a node.
-        """
+        """This function returns the list of neighbours of a node."""
         nb = np.array([], dtype=np.int8)
         for i in range(self.total_nodes):
-            if self.dist_matrix[node][i] > 0:
+            if dist_matrix[node][i] > 0:
                 nb = np.append(nb, i)
         return nb
 
     def astar(self):
-        """
-        This function finds the optimal route based on distance.
-        """
+        """This function finds the optimal route based on distance."""
         start = self.start
         end = self.end
         start_node = Node(None, start)
@@ -59,7 +69,7 @@ class Route:
         end_node = Node(None, end)
         end_node.g = end_node.h = end_node.f = 0
 
-        end_node_coordinates = (self.coordinates[end]['longitude'], self.coordinates[end]['latitude'])
+        end_node_coordinates = (coordinates[end]['longitude'], coordinates[end]['latitude'])
 
         # Initialize the open set and closed set
         open_set = []
@@ -100,8 +110,8 @@ class Route:
                     continue
 
                 new_node_coordinates = (
-                    self.coordinates[new_node.position]['longitude'], self.coordinates[new_node.position]['latitude'])
-                new_node.g = current_node.g + self.dist_matrix[nb][current_node.position] / 100
+                    coordinates[new_node.position]['longitude'], coordinates[new_node.position]['latitude'])
+                new_node.g = current_node.g + dist_matrix[nb][current_node.position] / 100
                 new_node.h = (new_node_coordinates[0] - end_node_coordinates[0]) ** 2 + (
                         new_node_coordinates[1] - end_node_coordinates[1]) ** 2
                 new_node.f = new_node.g + new_node.h
@@ -127,14 +137,5 @@ class Route:
         self.start = start
         self.end = end
         route = self.astar()
-        self.distance = self.route_distance(route)
+        self.distance = route_distance(route)
         return route
-
-    def route_distance(self, route):
-        """
-            Takes a route as a parameter and returns the distance of travelled on that route.
-        """
-        distance = 0
-        for i in range(1, len(route)):
-            distance += self.dist_matrix[route[i - 1]][route[i]]
-        return distance

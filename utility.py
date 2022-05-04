@@ -1,16 +1,36 @@
 import numpy as np
+import random
+from constants import coordinates
+from routes import Route, join_route
 
-def generate_vrp_instance(n, center, requests, coordinates):
+
+def generate_initial_requests(n, center, total_nodes):
+    """Generate the initial set of requests.
+    Args:
+        n: No. of nodes excluding the shuttle stand.
+        center: Index of the node considered as the shuttle stand.
+        total_nodes: Total number of nodes
+    """
+    requests = np.zeros(n, dtype=np.int8)
+    i = 0
+    while i < n:
+        val = random.randrange(total_nodes)
+        if val != center:
+            requests[i] = val
+            i += 1
+    return requests
+
+
+def generate_vrp_instance(n, center, requests):
     """Generate a random VRP instance.
     Args:
-        n: No. of nodes exclusing depot.
-        seed: Seed value for random number generator. Defaults to None, which sets a random seed.
+        n: No. of nodes excluding the shuttle stand.
+        center: Index of the node considered as the shuttle stand.
+        requests: The initial batch of drop requests.
     Returns:
         A list of (n + 1) x coordinates, a list of (n + 1) y coordinates and an (n + 1) x (n + 1) numpy array as the
         cost matrix.
     """
-
-
 
     # Generate VRP instance
     xs = np.zeros(6)
@@ -32,32 +52,28 @@ def generate_vrp_instance(n, center, requests, coordinates):
     return instance, xs, ys
 
 
-def generate_cvrp_instance(n, m, seed=None):
-    """Generate a random CVRP instance.
-    Args:
-        n: No. of nodes exclusing depot.
-        m: No. of vehicles in the problem.
-        seed: Seed value for random number generator. Defaults to None, which sets a random seed.
-    Returns:
-        A list of (n + 1) x coordinates, a list of (n + 1) y coordinates, an (n + 1) x (n + 1) numpy array as the
-        cost matrix, a list of m capacities for the vehicles and a list of n demads for the nodes.
-    """
+def generate_cluster_route(center, requests, cluster):
+    path = []
+    edge = []
+    drop_order = []
+    dist = 0
+    nodes = [requests[i - 1] for i in cluster]
+    closest = nodes[0]
+    start = center
+    route = Route()
+    while len(nodes) > 0:
+        closest_distance = 99999999  # Earth's cicumference: 40,075,000 m.
+        for node in nodes:
+            temp = route.generate(start, node)
+            if route.distance < closest_distance:
+                closest_distance = route.distance
+                closest = node
+                edge = temp
+        join_route(path, edge[:-1])
+        dist = dist + closest_distance
+        start = closest
+        nodes.remove(closest)
+        drop_order.append((center, closest))
+    path.append(closest)
 
-    # Set seed
-    if seed is not None:
-        np.random.seed(seed)
-
-    # Acquire vrp instance
-    instance, xc, yc = generate_vrp_instance(n)
-
-    # Generate capacity and demand
-    demands = np.random.rand(n) * 10
-    capacities = np.random.rand(m)
-    capacities = 4 * capacities * sum(demands) / sum(capacities)
-
-    # Floor data
-    demands = np.floor(demands).astype(int)
-    capacities = np.floor(capacities).astype(int)
-
-    # Return output
-    return instance, xc, yc, capacities, demands
+    return path, drop_order

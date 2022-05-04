@@ -3,14 +3,13 @@ import dimod
 import time
 
 from functools import partial
-from solver_backend import SolverBackend
+from backend import Backend
 from dwave.embedding.chain_strength import uniform_torque_compensation
 from qiskit_optimization.converters import QuadraticProgramToQubo
 from qiskit_optimization.algorithms import OptimizationResult
 
 
 class VehicleRouter:
-
     """Abstract Class for solving the Vehicle Routing Problem. To build a VRP solver, simply inherit from this class
     and overide the build_quadratic_program function in this class."""
 
@@ -39,7 +38,6 @@ class VehicleRouter:
         self.penalty = params.setdefault('constraint_penalty', None)
         self.chain_strength = params.setdefault('chain_strength', partial(uniform_torque_compensation, prefactor=2))
         self.num_reads = params.setdefault('num_reads', 1000)
-        self.solver = params.setdefault('solver', 'dwave')
 
         # Initialize quadratic structures
         self.qp = None
@@ -56,7 +54,7 @@ class VehicleRouter:
         self.timing = {}
 
         # Initialize backend
-        self.backend = SolverBackend(self)
+        self.backend = Backend(self)
 
         # Build quadratic models
         self.rebuild()
@@ -151,16 +149,23 @@ class VehicleRouter:
         # Get constraint violation data
         return self.qp.get_feasibility_info(data)
 
-    def solve(self, **params):
+    def solve(self):
 
-        """Solve the QUBO using the selected solver.
-        Args:
-            params: Parameters to send to the selected backend solver. You may also specify the solver to select a
-                different solver and override the specified self.solver.
-        """
-
-        # Resolve solver
-        params.setdefault('solver', self.solver)
+        """Solve the QUBO using the selected solver."""
 
         # Solve
-        self.backend.solve(**params)
+        self.backend.solve()
+
+    def get_clusters(self):
+
+        """Retrieve the clusters from the solution."""
+
+        clusters = []
+        for i in range(self.solution.shape[0]):
+            var_list = np.transpose(self.variables[i]).reshape(-1)
+            sol_list = np.transpose(self.solution[i]).reshape(-1)
+            active_vars = [var_list[k] for k in range(len(var_list)) if sol_list[k] == 1]
+            cluster = [int(var.split('.')[2]) for var in active_vars]
+            cluster = list(filter(lambda x: x != 0, cluster))
+            clusters.append(cluster)
+        return clusters
