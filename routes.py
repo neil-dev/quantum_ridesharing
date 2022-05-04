@@ -4,9 +4,13 @@ from constants import dist_matrix, coordinates
 
 class Node:
     def __init__(self, parent=None, position=None):
-        """Initializing a node.
 
+        """Initializing a node.
+        Args:
+            parent: Parent of the node.
+            position: Index of the node.
         """
+
         self.parent = parent
         self.position = position
 
@@ -36,6 +40,7 @@ def return_path(current_node):
 
 
 def join_route(route1, route2):
+
     """Add the contents of the second list to the first list.
     Args:
         route1: List denoting the 1st route.
@@ -43,13 +48,21 @@ def join_route(route1, route2):
     Returns:
         A list with the 2nd route appended to the 1st route.
     """
+
     for i in route2:
         route1.append(i)
     return route1
 
 
 def route_distance(route):
-    """Takes a route as a parameter and returns the distance of travelled on that route."""
+
+    """Calculate the total distance of a route.
+    Args:
+        route: A list containing the route.
+    Returns:
+        An integer denoting the total distance of the route.
+    """
+
     distance = 0
     for i in range(1, len(route)):
         distance += dist_matrix[route[i - 1]][route[i]]
@@ -59,16 +72,23 @@ def route_distance(route):
 class Route:
 
     def __init__(self):
+
+        """Initialize the route object."""
+
         self.total_nodes = dist_matrix.shape[0]
         self.start = None
         self.end = None
         self.distance = None
 
     def neighbour(self, node):
-        """This function returns the list of neighbours of a node.
+
+        """List of neighbours of a node.
         Args:
             node: The index of the node in consideration.
+        Returns:
+            List containing the indices of the neighbours of the node.
         """
+
         nb = np.array([], dtype=np.int8)
         for i in range(self.total_nodes):
             if dist_matrix[node][i] > 0:
@@ -76,7 +96,9 @@ class Route:
         return nb
 
     def astar(self):
+
         """This function finds the optimal route based on distance."""
+
         start = self.start
         end = self.end
         start_node = Node(None, start)
@@ -149,6 +171,15 @@ class Route:
         return False
 
     def generate(self, start, end):
+
+        """Generate a new route between the start and end points.
+        Args:
+            start: The starting position of the route.
+            end: The ending position of the route.
+        Returns:
+            A list containing the generated route.
+        """
+
         self.start = start
         self.end = end
         route = self.astar()

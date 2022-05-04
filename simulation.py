@@ -9,6 +9,7 @@ import random
 
 class Simulation:
     def __init__(self, m, n, center, total_nodes, clusters, requests, folder=None):
+
         """Initializing the simulation. The simulation will create an initial state and then run 30 iterations.
         In each iteration, the state of the shuttles will be displayed. A random request will be generated for each
         iteration. The request will be checked for being serviceable. If serviceable, the state of the shuttles is
@@ -22,6 +23,7 @@ class Simulation:
             requests: The list of initial requests.
             folder: The name of the folder where the images are to be saved.
         """
+
         if folder is None:
             folder = 'random'
         self.m = m
@@ -124,6 +126,7 @@ class Simulation:
             request: A tuple containing the pickup and drop location.
             iteration: The current iteration of the simulation.
         """
+
         iteration_state = Visual(self.center, folder=self.folder)
         iteration_state.draw_state(self.shuttles)
         print('Request generated: ', request)
