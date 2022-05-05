@@ -147,6 +147,8 @@ class Simulation:
                 if shuttle.occupancy != 0:
                     pos = shuttle.route.index(shuttle.current_position)
                     shortest_distance = 999999
+
+                    # Checking if the pickup is near the shuttle's current position.
                     for i in range(pos, pos + 3):
                         if i >= len(shuttle.route):
                             break
@@ -163,6 +165,7 @@ class Simulation:
                     # Remove print statement
                     # print('Source Point: {}'.format(src_pt))
 
+                    # Checking if the drop location falls along the route.
                     if src_pt != -1:
                         shortest_distance = 999999
                         for j in range(pos, len(shuttle.route)):
@@ -209,11 +212,12 @@ class Simulation:
         selected_shuttle = suitable_shuttles[closest]
         print('Selected Shuttle: ', suitable_shuttles[closest][0].number)
         if len(selected_shuttle[0].passengers) == 0:
-            # Use spanning tree algo
+            # Creating the route for idle shuttle
             selected_shuttle[0].drop_order.append(request)
             temp = (route.generate(selected_shuttle[0].current_position, request[0]), route.generate(*request))
             selected_shuttle[0].route = join_route(temp[0][:-1], temp[1])
             selected_shuttle[0].index = 0
+            # Checking if pickup is at current position
             if selected_shuttle[0].current_position == request[0]:
                 selected_shuttle[0].passengers.append(
                     Passenger(request, selected_shuttle[0].number))
@@ -232,12 +236,15 @@ class Simulation:
                 iteration_state.draw_route(temp[1],
                                            iteration_state.current_route_color[self.shuttle_index[
                                                selected_shuttle[0].number]])
+        # Reroute for the selected shuttle
         else:
             src_pt = selected_shuttle[1][0]
             dest_pt = selected_shuttle[1][1]
             drop_list = [node for node in selected_shuttle[0].drop_order]
             flag = False
             insert_index = 0
+
+            # Insert the new request in the appropriate position in drop order.
             for i in range(len(drop_list)):
                 if dest_pt < selected_shuttle[0].route.index(drop_list[i][1]):
                     drop_list.insert(i, request)
@@ -257,6 +264,7 @@ class Simulation:
             branch_route = route.generate(selected_shuttle[0].route[src_pt], request[0])
             new_route = join_route(new_route, branch_route[:-1])
 
+            # get the requests that will be serviced after picking up the new passenger.
             drop_first = False
             for i in range(insert_index):
                 if selected_shuttle[0].route.index(drop_list[i][1]) > src_pt:
@@ -264,6 +272,8 @@ class Simulation:
                     break
             drop_list = drop_list[i if drop_first else insert_index:]
             join_index = len(new_route)
+
+            # create route to be followed after picking up the new passenger
             new_route = join_route(new_route, route.generate(request[0], drop_list[0][1])[:-1])
             for i in range(1, len(drop_list)):
                 new_route = join_route(new_route, route.generate(drop_list[i - 1][1], drop_list[i][1])[:-1])
