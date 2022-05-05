@@ -82,6 +82,13 @@ class Visual:
                                image_coordinates[shuttles[i].current_position][1] + self.node_size),
                               fill=self.current_position_color[i], outline=(0, 0, 0))
 
+            if shuttles[i].pickup:
+                self.draw.ellipse((image_coordinates[shuttles[i].pickup[0]][0] - self.node_size,
+                                   image_coordinates[shuttles[i].pickup[0]][1] - self.node_size,
+                                   image_coordinates[shuttles[i].pickup[0]][0] + self.node_size,
+                                   image_coordinates[shuttles[i].pickup[0]][1] + self.node_size),
+                                  fill=self.branch_color[i], outline=(0, 0, 0))
+
         self.draw.ellipse(
             (image_coordinates[self.center][0] - self.node_size, image_coordinates[self.center][1] - self.node_size,
              image_coordinates[self.center][0] + self.node_size, image_coordinates[self.center][1] + self.node_size),
@@ -132,6 +139,13 @@ class Visual:
                                image_coordinates[shuttles[i].current_position][0] + self.node_size,
                                image_coordinates[shuttles[i].current_position][1] + self.node_size),
                               fill=self.current_position_color[i], outline=(0, 0, 0))
+
+            if shuttles[i].pickup:
+                self.draw.ellipse((image_coordinates[shuttles[i].pickup[0]][0] - self.node_size,
+                                   image_coordinates[shuttles[i].pickup[0]][1] - self.node_size,
+                                   image_coordinates[shuttles[i].pickup[0]][0] + self.node_size,
+                                   image_coordinates[shuttles[i].pickup[0]][1] + self.node_size),
+                                  fill=self.branch_color[i], outline=(0, 0, 0))
 
         self.draw.ellipse(
             (image_coordinates[self.center][0] - self.node_size, image_coordinates[self.center][1] - self.node_size,

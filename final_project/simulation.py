@@ -152,7 +152,7 @@ class Simulation:
                             break
                         point = shuttle.route[i]
                         route.generate(point, request[0])
-                        print('{}\t{}\t{}\t{}'.format(i, point, request[0], route.distance))
+                        # print('{}\t{}\t{}\t{}'.format(i, point, request[0], route.distance))
                         if route.distance < 1000:
                             if route.distance > shortest_distance:
                                 continue

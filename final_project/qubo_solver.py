@@ -35,12 +35,13 @@ class QuboSolver(VehicleRouter):
 
         # Build objective function
         obj_linear_a = {self.variables[m, n, 0]: self.cost[0, n] for m in range(self.m) for n in range(1, self.n + 1)}
-        obj_linear_b = {self.variables[m, n, -1]: self.cost[n, 0] for m in range(self.m) for n in range(1, self.n + 1)}
+        # obj_linear_b = {self.variables[m, n, -1]: self.cost[n, 0] for m in range(self.m) for n in range(1, self.n + 1)}
         obj_quadratic = {(self.variables[m, i, n], self.variables[m, j, n + 1]): self.cost[i, j] for m in range(self.m)
                          for n in range(self.n - 1) for i in range(self.n + 1) for j in range(self.n + 1)}
 
         # Add objective to quadratic program
-        self.qp.minimize(linear=dict(Counter(obj_linear_a) + Counter(obj_linear_b)), quadratic=obj_quadratic)
+        # self.qp.minimize(linear=dict(Counter(obj_linear_a) + Counter(obj_linear_b)), quadratic=obj_quadratic)
+        self.qp.minimize(linear=dict(Counter(obj_linear_a)), quadratic=obj_quadratic)
 
         # Add constraints - single client service
         for k in range(1, self.n + 1):
