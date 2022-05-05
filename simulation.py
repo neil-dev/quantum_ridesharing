@@ -64,15 +64,17 @@ class Simulation:
         # initial_state.show()
         initial_state.save('Initial state')
 
-    def simulate(self):
+    def simulate(self, iterations):
 
         """A simulation is run for thirty iterations. At each iteration, every shuttle is considered to move to the
         next node in its route irrespective of the distance between the nodes.
         A single request is generated per iteration, which is handled accordingly.
+        Args:
+            iterations: The number of iterations the simulation will run for.
         """
 
         print('\n\t###Simulation Starting###\n')
-        for i in range(30):
+        for i in range(iterations):
             print('\nIteration ', i + 1)
             for shuttle in self.shuttles:
                 if shuttle.route != [] and shuttle.index < len(shuttle.route) - 1:
